@@ -1,6 +1,7 @@
 {
     "name": "dzaki236/artisan-laravel-view",
     "type": "library",
+    "description":"library for improve folder management by views"
     "license": "MIT",
     "authors": [{
         "name": "dzaki236",
