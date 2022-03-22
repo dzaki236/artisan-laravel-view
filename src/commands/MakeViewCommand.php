@@ -11,7 +11,7 @@ class MakeViewCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'make:view {name}';
+    protected $signature = 'make:view {name} {--extends=}';
 
     /**
      * The console command description.
@@ -52,6 +52,7 @@ class MakeViewCommand extends Command
     public function handle()
     {
         $view = $this->argument('name');
+        $extends = $this->option('extends');
 
         $path = $this->module->viewPath($view);
 
@@ -62,8 +63,13 @@ class MakeViewCommand extends Command
             $this->error("File {$path} already exists!.");
             return;
         }
-
-        File::put($path, $path);
+        if ($extends!=null) {
+            # code...
+            File::put($path, "@extends('{$extends}')");
+        }else {
+            # code...
+            File::put($path,null);
+        }
 
         $this->info("File {$path} created!.");
     }

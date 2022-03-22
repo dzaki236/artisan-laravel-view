@@ -27,7 +27,7 @@ class Module
     *
     * @param $path
     */
-   public function createDir($path): void
+   public function createDir($path)
    {
       $dir = dirname($path);
 
