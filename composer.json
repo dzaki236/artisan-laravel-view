@@ -1,0 +1,26 @@
+{
+    "name": "dzaki236/artisan-laravel-view",
+    "type": "library",
+    "license": "MIT",
+    "authors": [{
+        "name": "dzaki236",
+        "email": "dzakiahnafz@gmail.com"
+    }],
+    "require": {
+        "php": ">=7.4.0",
+        "laravel/framework": "^8.0 || ^9.0"
+
+    },
+    "autoload": {
+        "psr-4": {
+            "Dzaki236\\ArtisanLaravelView\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Dzaki236\\ArtisanLaravelView\\ServiceProvider"
+            ]
+        }
+    }
+}
