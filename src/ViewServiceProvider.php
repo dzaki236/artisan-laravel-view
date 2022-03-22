@@ -23,12 +23,15 @@ class ViewServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton('make:view {name}', function ($app) {
-            return new MakeViewCommand;
-        });
-
-        $this->commands([
-            'make:view {name}',
-        ]);
+        if (env('APP_ENV') != 'production') {
+            # code...
+            $this->app->singleton('make:view {name}', function ($app) {
+                return new MakeViewCommand;
+            });
+            
+            $this->commands([
+                'make:view {name}',
+            ]);
+        }
     }
 }
