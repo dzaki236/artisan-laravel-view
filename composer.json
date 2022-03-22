@@ -19,7 +19,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Dzaki236\\ArtisanLaravelView\\ServiceProvider"
+                "Dzaki236\\ArtisanLaravelView\\ViewServiceProvider"
             ]
         }
     }
